@@ -55,10 +55,7 @@ io.on("connection", function (uniqueSocket) {
         console.log("invalid move", move);
         uniqueSocket.emit("invalid move", move);
       }
-    } catch (err) {
-      console.log(err);
-      uniqueSocket.emit("invalid move", move);
-    }
+    } catch (err) {}
   });
 });
 server.listen(3000, () => {
